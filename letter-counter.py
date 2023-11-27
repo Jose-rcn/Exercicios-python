@@ -1,3 +1,4 @@
+#Desenvolver um programa empython capaz de contar o caractere que mais se repete dentro de uma string
 phrase = input('Write a phrase:')
 most_repeated = phrase[0]
 counter = 0
