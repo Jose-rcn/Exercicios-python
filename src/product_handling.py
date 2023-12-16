@@ -1,22 +1,37 @@
 from copy import deepcopy
-produtos = [
-    {'nome': 'Pineapple', 'preco': 10.00},
-    {'nome': 'Meat', 'preco': 22.32},
-    {'nome': 'Banana', 'preco': 10.11},
-    {'nome': 'Chocolate', 'preco': 105.87},
-    {'nome': 'Wine', 'preco': 69.90},
+products = [
+    {'nome': 'Pineapple', 'price': 10.00},
+    {'nome': 'Meat', 'price': 22.32},
+    {'nome': 'Banana', 'price': 10.11},
+    {'nome': 'Chocolate', 'price': 105.87},
+    {'nome': 'Wine', 'price': 69.90},
 ]
-for itens in produtos:
-    itens['preco'] = round(itens['preco'] * 1.1,2)
-novos_produtos = deepcopy(produtos)
-# def order_dicts(list_of_dicts):
-#     ordered_list  = []
-#     teste = sorted([itens['nome'] for itens in list_of_dicts])
-#     for index, itens in enumerate(list_of_dicts):
-#         list_of_dicts.index(itens)
-#         ordered_list += list_of_dicts[teste[index]]
+
+
+new_products = deepcopy(products)
+for items in new_products:
+    items['price'] = round(items['price'] * 1.1,2)
+
+products_ordered_by_name = deepcopy(products)
+products_ordered_by_name = sorted(products,key=lambda *produtos: [itens['nome']for itens in produtos])
+
+products_ordered_by_value = deepcopy(products)
+products_ordered_by_value = sorted(products,key=lambda *produtos: [itens['price']for itens in produtos])
+
+# print(*products)
+# print(*products_ordered_by_name)
+# print(products_ordered_by_value)
+
+#Another way to solve the problem without using the sorted method
+# def order_dicts(list_of_dicts,key):
+#     ordered_list = deepcopy(produtos)
+#     '''Recebe uma lista com dicionarios e uma chave, e os ordena conforme a chave. Todos os dicionarios presentes na lista precisam ter a chave'''
+#     for i in range(0, len(list_of_dicts)):
+#         for t in range(i +1 ,len(list_of_dicts)):
+#             if ordered_list[i][key] > ordered_list[t][key]:
+#                 ordered_list[i], ordered_list[t] = ordered_list[t], ordered_list[i]
 #     return ordered_list
-# print(order_dicts(produtos))
+
 
 
 
