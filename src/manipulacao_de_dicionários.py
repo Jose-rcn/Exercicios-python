@@ -16,7 +16,7 @@ products_ordered_by_name = deepcopy(products)
 products_ordered_by_name = sorted(products,key=lambda *produtos: [itens['nome']for itens in produtos])
 
 products_ordered_by_value = deepcopy(products)
-products_ordered_by_value = sorted(products,key=lambda *produtos: [itens['price']for itens in produtos])
+products_ordered_by_value = sorted(products,key=lambda *produtos: [itens['price']for itens in produtos], reverse=True)
 
 # print(*products)
 # print(*products_ordered_by_name)
