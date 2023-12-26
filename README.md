@@ -11,3 +11,5 @@ Exercícios feitos durante meu aprendizado em python do básico ao avançado.
 |[palavras palindromas](https://github.com/Jose-rcn/Exercicios-python/blob/main/src/palavras_palindromas.py)|Filtra palavras palindromas de uma lista e as adiciona a uma nova lista|List comprehension|
 |[Bubble sort](https://github.com/Jose-rcn/Exercicios-python/blob/main/src/bubble_sort.py)| Estudo sobre o algoritmo de ordenação Buble sort| Algoritmos de ordenação|
 |[Manipulação de dicionários](https://github.com/Jose-rcn/Exercicios-python/blob/main/src/manipulacao_de_dicion%C3%A1rios.py)|Manipulação de uma lista de dicionários|Deep copy & List comprehension & sorted()|
+|[Unir Listas](https://github.com/Jose-rcn/Exercicios-python/blob/main/src/unir_listas.py)|"zipando" listas de diferentes tamanhos para estudo da função zip_longest do itertools|Itertools|
+|[Unir Strings](https://github.com/Jose-rcn/Exercicios-python/blob/main/src/unir_strings.py)|"zipando" strings de diferentes tamanhos para estudo da função zip_longest do itertools|Itertools|
