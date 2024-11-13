@@ -42,14 +42,14 @@ class rodas_terrestre(rodas):
     def set_raio(self, value):
         self._raio = value
         
-class Criar_veiculo(ABC):
+class Factory(ABC):
     @abstractmethod
     def criar_rodas(self):
         ...
     @abstractmethod
     def criar_velocimetro(self):
         ...
-class Criar_veiculo_terrestre(Criar_veiculo):
+class Factoy_veiculo_terrestre(Factory):
     def criar_rodas(self):
         roda = rodas_terrestre()
         roda.set_raio(0.15)
@@ -59,7 +59,7 @@ class Criar_veiculo_terrestre(Criar_veiculo):
         velocimetro.set_velocidade(0)
         return velocimetro
 
-class Criar_veiculo_aereo(Criar_veiculo):
+class Factory_veiculo_aereo(Factory):
     def criar_rodas(self):
         roda = rodas_terrestre()
         roda.set_raio(15)
@@ -70,7 +70,7 @@ class Criar_veiculo_aereo(Criar_veiculo):
         return velocimetro
 
 if __name__ == "__main__":
-    fabrica_aereo = Criar_veiculo_aereo()
+    fabrica_aereo = Factory_veiculo_aereo()
     vel = fabrica_aereo.criar_velocimetro()
     roda = fabrica_aereo.criar_rodas()
     vel.set_velocidade(100)
